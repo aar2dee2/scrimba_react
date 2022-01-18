@@ -2,3 +2,41 @@ html, body {
     margin: 0;
     padding: 0;
 }
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.582);
+    color: rgb(240, 237, 233);
+    box-shadow: 0px 30px 40px darkgray;
+}
+
+.nav-items {
+    list-style: none;
+    display: flex;
+}
+
+.nav-items > li {
+    padding: 10px;
+}
+
+.logo {
+    width: 60px;
+}
+
+.footer {
+    background-color: grey;
+    height: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding:10px 0px 25px 0px;
+}
+
+.footer-items { 
+    
+    margin-top: 10px;
+    margin-left: 10px;
+}
