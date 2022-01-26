@@ -1,19 +1,6 @@
 // Spend a minute memorizing the line below
 // Re-write the line of code as best you can from memory
-function Header() {
-    return (
-        <header>
-            <nav className="nav">
-                <img src="./react-logo.png" className="logo" />
-                <ul className="nav-items">
-                    <li>Pricing</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                </ul>
-            </nav>
-        </header>
-    )
-}
+import Header from "./Header"
 
 function Footer() {
     return (
