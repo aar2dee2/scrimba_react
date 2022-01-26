@@ -13,9 +13,9 @@
         console.log(element)
         
         // creating two elements side by side with JSX
-        const sideBySide = <React.Fragment>
+        const sideBySide = <>
             <span>Some</span> <span>Text</span>
-            </React.Fragment>
+            </>
         console.log(sideBySide)
         ReactDOM.render(React.createElement("div", {children: [element, sideBySide]}), rootElement)
         // creating two elements side by side without JSX
