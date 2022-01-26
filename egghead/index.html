@@ -5,16 +5,33 @@
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
         const rootElement = document.getElementById("root")
-        // const element = React.createElement("div", {
-        //     children: ["Hello World", ", Goodbye World"],
-        //     className: "container",
-        // })
+        // this approach uses JSX
         const children = "Hello World"
         const className = "container"
         const props = {children, className}
         const element = <div id="app-root" {...props} className="not-container" />
         console.log(element)
-        ReactDOM.render(element, rootElement)
+        
+        // creating two elements side by side with JSX
+        const sideBySide = <React.Fragment>
+            <span>Some</span> <span>Text</span>
+            </React.Fragment>
+        console.log(sideBySide)
+        ReactDOM.render(React.createElement("div", {children: [element, sideBySide]}), rootElement)
+        // creating two elements side by side without JSX
+        // const helloElement = React.createElement("span", null, "Hello")
+        // const worldElement = React.createElement("span", null, " World")
+        // const fruit = React.createElement(React.Fragment, null, helloElement, worldElement)
+        // console.log(fruit)
+        // ReactDOM.render(fruit, document.getElementById("root"))
+        
+        // creating an element without using JSX
+        // const element = React.createElement("div", {
+        //     children: ["Hello World", ", Goodbye World"],
+        //     className: "container",
+        // })
+
+        // creating an element without using React
         // const element = document.createElement("div")
         // element.textContent = "Hello World"
         // element.className = "container"
