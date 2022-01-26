@@ -9,9 +9,10 @@
         //     children: ["Hello World", ", Goodbye World"],
         //     className: "container",
         // })
-        const myChildren = "Hello World"
-        const myClassName = "container"
-        const element = <div className={myClassName}>{myChildren}</div>
+        const children = "Hello World"
+        const className = "container"
+        const props = {children, className}
+        const element = <div {...props} />
         console.log(element)
         ReactDOM.render(element, rootElement)
         // const element = document.createElement("div")
