@@ -12,7 +12,7 @@
         const children = "Hello World"
         const className = "container"
         const props = {children, className}
-        const element = <div {...props} />
+        const element = <div id="app-root" {...props} className="not-container" />
         console.log(element)
         ReactDOM.render(element, rootElement)
         // const element = document.createElement("div")
