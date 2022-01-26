@@ -13,15 +13,17 @@
         console.log(element)
         
         // creating two elements side by side with JSX
-        const Message = (props) => <div className="message">{props.msg}</div>
+        const Message = (props) => <div className="message">{props.children}</div>
         // so in the line above the object name can be anything, not necessary it should be called 'props'
         const sideBySide = (
             <div className="container">
-                <Message msg="Elixir is awesome" />
-                <Message msg="GM World" />
-                <Message msg="Goodbye World"/>
+                <Message children="Elixir is awesome" />
+                <Message>GM World</Message>
+                <Message children="Goodbye World"/>
             </div>
         )
+        // Since we're using props.children in the Message component, we can simply include the text inside the component tags
+        // Using the text directly inside the Message tags or passing it as value to the children property are both equivalent
         // when 'message' is used in lower case - it is treated as a DOM element - the code in the console shows 'React.createElement("message"...)'
         // const message = (props) => <div className="message">{props.msg}</div>
         // const sideBySide = (<>
