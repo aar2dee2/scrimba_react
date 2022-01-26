@@ -13,9 +13,12 @@
         console.log(element)
         
         // creating two elements side by side with JSX
-        const sideBySide = <>
-            <span>Some</span> <span>Text</span>
-            </>
+        const message = (props) => <div className="message">{props.msg}</div>
+        // so in the line above the object name can be anything, not necessary it should be called 'props'
+        const sideBySide = (<>
+            {message({msg: "GM World"})}
+            {message({msg: "Goodbye World"})}
+            </>)
         console.log(sideBySide)
         ReactDOM.render(React.createElement("div", {children: [element, sideBySide]}), rootElement)
         // creating two elements side by side without JSX
