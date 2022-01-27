@@ -1,0 +1,42 @@
+<body>
+    <div id="root"></div>
+        <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script src="https://unpkg.com/prop-types@15.6/prop-types.js"></script>
+    <script type="text/babel">
+        const rootElement = document.getElementById("root")
+        
+        function CharacterCount({text}) {
+            if (text.length > 0) {
+                return <div>{`The text "${text}" has `}<strong>{text.length}</strong> characters</div>
+            } else {
+                return <div>The text has no characters</div>
+            }
+        }
+        // alternate implementation
+        function CharCount({text}) {
+            // using return statement - vanilla js
+            // the div tags inside the return - JSX syntax
+            // the expression using curly braces inside the div tags uses interpolation using Javascript - but only limited JS functionality is permitted in that expression
+            return (
+                <div>
+                    {`The text "${text}" has `}
+                    {text.length ? <strong>{text.length}</strong> : "No"}
+                    {" characters"}
+                </div>
+            )
+        }
+        const element = (
+            <>
+                <CharacterCount text="Hello World" />
+                <CharacterCount text="" />
+                <CharacterCount text="Elixir is amazing" />
+                <CharCount text="This is cool" />
+            </>
+        )
+
+        ReactDOM.render(element, rootElement)
+    </script>
+    
+</body>
