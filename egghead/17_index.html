@@ -18,7 +18,7 @@
                 React.useEffect(() => {
                     console.log('rendered')
                     window.localStorage.setItem(key, state)
-                }, [state])
+                }, [key, state])
 
                 return [state, setState]
             }
