@@ -19,6 +19,9 @@
                         }
                     )
                 }, [pokemonName])
+                if (!pokemonName) {
+                    return "Submit a pokemon"
+                }
                 if (!pokemon) {
                     return "..."
                 }
